@@ -17,4 +17,4 @@
  - Provide query access for analysis and reporting
 
  ## Current Status
- 🚧 Phase 1: Data ingestion and validation
+ Phase 1: Data ingestion and validation
