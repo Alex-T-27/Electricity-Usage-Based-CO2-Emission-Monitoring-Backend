@@ -1,4 +1,4 @@
-# Environment Telemetry & Emission Backend
+# Electricity Usage-Based CO2 Emission Monitoring Backend.
 
 A backend system that ingests **electricity usage telemetry**, validates and normalizes incoming data, **calculates standardized CO₂ emissions using grid-based emission factors**, and stores results in an audit-ready, queryable form.
 
