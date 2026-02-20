@@ -16,13 +16,6 @@ def health_check():
     return {"status": "ok"}
 
 
-class ElectricityReading(BaseModel):
-    sensor_id: str
-    timestamp: datetime
-    kwh: float
-    unit: str
-
-
 @app.post("/readings")
 def ingest_reading(reading: ElectricityReading):
     return {
