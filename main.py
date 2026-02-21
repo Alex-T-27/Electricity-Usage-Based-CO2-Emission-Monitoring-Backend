@@ -13,8 +13,13 @@ def root():
         "status": "running"
     }
 
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
+
+
 app.include_router(
     readings_router,
     prefix="/readings",
     tags=["readings"]
-)   return {"status": "ok"}
+)
