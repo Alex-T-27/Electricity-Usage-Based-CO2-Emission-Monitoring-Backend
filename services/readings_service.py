@@ -1,5 +1,7 @@
 from db.database import SessionLocal
 from db.models import Reading
+from sqlalchemy import asc, desc
+from sqlalchemy.orm import Session
 
 EMISSION_FACTOR = 0.233
 
@@ -50,3 +52,22 @@ def get_readings_by_sensor(sensor_id: str):
     db.close()
 
     return reading
+
+def get_readings(
+    db: Session,
+    sensor_id: str | None = None,
+    limit: int | None = None,
+    offset: int = 0,
+    sort: str = "desc"
+):
+    query = db.query(Reading)
+
+    if sensor_id:
+        query = query.filter(Reading.sensor_id == sensor_id)
+
+    if sort == "asc":
+        query = query.order_by(asc(Reading.timestamp))
+    else:
+        query = query.order_by(desc(Reading.timestamp))
+
+    return query.offset(offset).limit(limit).all()
