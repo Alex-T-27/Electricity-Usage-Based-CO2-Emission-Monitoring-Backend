@@ -4,3 +4,7 @@ __pycache__/
 .env
 Documentation/
 DataSource/
+private.pem
+telemetry.db
+teaching_code.md
+CLAUDE.MD
