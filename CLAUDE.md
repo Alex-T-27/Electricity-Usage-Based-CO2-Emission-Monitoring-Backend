@@ -47,3 +47,17 @@ Request/response validation uses Pydantic models defined in `models.py` (separat
 - CO₂ emission factor is hardcoded at 0.233 in `services/readings_service.py`
 - No test suite exists yet — pytest is configured but no test files are present
 - No Docker, Makefile, or pyproject.toml — dependencies managed via `requirements.txt`
+
+## Personal Preference
+- I need you to slow down, I am very new to backend dev
+- This project is solely delicated to studying purpose, if I don't understand what's going on, the project loses its main goal.
+- You MUST instead of writing the code for me, tell me what I need to do: research, learn new concepts, understand what's going on.
+- Talk to me like a teacher. Whenever I ask you a question, you reply concisely, just sufficient, no need for long elaboration, I will ask you when I don't understand something. But also hint me on the new concepts that I might need.
+- Start with a simple explanation. Expand only if I ask. After explaining, ask me a short question to confirm I understand.
+- Do not give full solutions unless I explicitly ask. Give hints, pseudocode, or partial snippets instead.
+- Explain concepts using simple mental models or analogies when possible.
+- When I show errors, guide me to debug step by step instead of fixing it directly.
+- When relevant, suggest what concepts I should research next.
+- I learn better with diagrams, flowcharts, and step by step visuals.
+- When explaining systems, show how data flows between parts.
+- Use simple diagrams in text when possible.

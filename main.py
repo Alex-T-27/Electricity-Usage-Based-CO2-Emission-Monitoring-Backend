@@ -10,6 +10,6 @@ app = FastAPI()
 app.include_router(auth.router, prefix="/auth", tags=["Auth"])         # <-- add
 app.include_router(readings.router, prefix="/readings", tags=["Readings"])
 
-@app.get("/health")
+@app.get("/")
 def health():
     return {"status": "ok"}

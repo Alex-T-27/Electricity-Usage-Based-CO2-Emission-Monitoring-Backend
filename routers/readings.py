@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException, Depends
 from sqlalchemy.orm import Session
 from db.database import get_db
 from db.models import User
-from dependencies import get_current_user   # <-- import the guard
+from dependency import get_current_user   # <-- import the guard
 from models import ElectricityReading
 from services.readings_service import save_reading, get_readings, get_reading_by_id
 

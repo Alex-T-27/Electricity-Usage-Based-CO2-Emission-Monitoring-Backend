@@ -5,6 +5,8 @@ __pycache__/
 Documentation/
 DataSource/
 private.pem
+public.pem
 telemetry.db
 teaching_code.md
 CLAUDE.MD
+

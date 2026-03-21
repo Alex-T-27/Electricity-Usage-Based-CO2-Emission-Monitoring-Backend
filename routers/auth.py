@@ -24,7 +24,7 @@ def register(body: AuthRequest, db: Session = Depends(get_db)):
 
     if existing:
         raise HTTPException(
-            status_code=400,
+            status_code=409,
             detail="Username already taken",
         )
 
