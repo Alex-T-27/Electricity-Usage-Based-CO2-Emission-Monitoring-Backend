@@ -9,8 +9,7 @@ def calculate_co2(kwh: float) -> float:
     return kwh * EMISSION_FACTOR
 
 
-def save_reading(reading):
-    db = SessionLocal()
+def save_reading(db: Session, reading):
 
     co2_value = calculate_co2(reading.kwh)
 
@@ -25,33 +24,15 @@ def save_reading(reading):
     db.add(db_reading)
     db.commit()
     db.refresh(db_reading)
-    db.close()
 
     return db_reading
 
 
-def get_all_readings():
-    db = SessionLocal()
-    readings = db.query(Reading).all()
-    db.close()
 
-    return readings
-
-
-def get_reading_by_id(reading_id: int):
-    db = SessionLocal()
+def get_reading_by_id(db: Session, reading_id: int):
     reading = db.query(Reading).filter(Reading.id == reading_id).first()
-    db.close()
-
     return reading
 
-
-def get_readings_by_sensor(sensor_id: str): 
-    db = SessionLocal()
-    reading = db.query(Reading).filter(Reading.sensor_id == sensor_id).all()
-    db.close()
-
-    return reading
 
 def get_readings(
     db: Session,

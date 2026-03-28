@@ -17,7 +17,7 @@ def test_registering_new_user():
     print(response.json())
 
 def test_registering_existing_user():
-    response = client.post("/auth/register", json={"username":"Alex", "password":"ILoveCookies"})
+    response = client.post("/auth/register", json={"username":"Alex217", "password":"ILoveCookies"})
     assert response.status_code == 409
     assert response.json() == {"detail" : "Username already taken"}
     print(response.json())
